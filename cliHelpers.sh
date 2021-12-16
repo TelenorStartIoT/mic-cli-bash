@@ -23,15 +23,15 @@ function createThing {
     # get thing types
     printf "domain: "
     read domain
-    printf "IMSI: "
-    read imsi
+    printf "Thing Name: "
+    read thingName 
     printf "Thing Type: "
     read thingType
 
     ### Create the Thing
     URL="$baseURL/things"
     authHeader='Authorization:'"$token"
-    thingName='"thingName":"'"$imsi"'"'
+    thingName='"thingName":"'"$thingName"'"'
     thingType='"thingType":"'$thingType'"'
     domain='"domain":"'$domain'"'
     protocol='"protocol":"mqtt"'

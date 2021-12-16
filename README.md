@@ -51,6 +51,11 @@ domain:domain_name
 ### Interractive
 if a `settings.conf` file is not found, or the parameter is missing, `micCLI.sh` will prompt the user for the required information. The format is as for `settings.conf`. 
 
+## Functionality
+- List Things : List the total number of things in the given domain that the user has visibility of
+- Create Thing : Create a thing in the given domain. This is intended to create a thing with a specific/custom name (for example IMSI or IMEI), rather than the MIC generated name.
+    - `./micCLI.sh` will ask for a thingName, the user should provide the custom name, such as IMSI
+
 ## Notes
 `micCLI.sh` performs minimal error checking. For example it will not validate the format of the parameters or information provided by the user, it will trust that is is correct. This may result in a simple error (for example unable to authenticate) or a much more serious error (deletion of data) - exercise caution! Read-Only operations (List *) should be relatively safe!
 
